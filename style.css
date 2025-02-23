@@ -12,33 +12,138 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 80px;
 }
 
 .content-container {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 2rem 3rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2vh 3vw;
+    border-radius: 1vw;
+    box-shadow: 0 0.4vh 0.6vh rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 2.5em;
-    color: #06ACDE;
+    font-size: 2.5vw;
+    background: linear-gradient(45deg, #06ACDE, #00ff9d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     text-align: center;
-    margin-bottom: 20px;
-    /* Adding text shadow to make it more readable on image background */
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    margin-bottom: 2vh;
+    letter-spacing: 0.2vw;
+    text-transform: uppercase;
 }
 
 .byline {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 1.2em;
-    color: #06ACDE;
+    font-size: 1.2vw;
+    background: linear-gradient(45deg, #06ACDE, #00ff9d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     text-align: center;
-    /* Adding text shadow to make it more readable on image background */
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.1vw;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1vh;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-links {
+    max-width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.nav-item {
+    color: #06ACDE;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0.5vw 1vw;
+    border-radius: 0.5vw;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 172, 222, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover::before {
+    left: 0;
+}
+
+.nav-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.4vh 1vh rgba(6, 172, 222, 0.2);
+}
+
+.cycle-page {
+    background-image: url('images/Carbon and Nitrogen Cycle/CarbonAndNitrogenCycleBG.jpeg');
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.4vw;
+    background: linear-gradient(45deg, #06ACDE, #00ff9d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    letter-spacing: 0.1vw;
+    margin-top: 0;
+}
+
+.cycle-page .content-container {
+    margin-top: 12vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.disruptions-page {
+    background-image: url('images/Disruptions and Their Effects/disruptionsBG.jpeg');
+}
+
+.disruptions-container {
+    margin-left: auto;
+    margin-right: 5vw;
+    width: 40vw;
+    margin-top: 20vh;
+}
+
+.impact-page {
+    background-image: url('images/Human Impact/humanImpactBG.jpeg');
+}
+
+.impact-page .content-container {
+    margin-left: auto;
+    margin-right: 5vw;
+    width: 40vw;
+    margin-top: auto;
+    margin-bottom: 5vh;
 }
