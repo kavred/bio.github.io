@@ -7,11 +7,7 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;  /* Changed from height to min-height */
     padding-top: 80px;
 }
 
@@ -104,6 +100,10 @@ body {
 
 .cycle-page {
     background-image: url('images/Carbon and Nitrogen Cycle/CarbonAndNitrogenCycleBG.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* Makes the background stay fixed while scrolling */
 }
 
 .subtitle {
@@ -127,6 +127,7 @@ body {
 
 .disruptions-page {
     background-image: url('images/Disruptions and Their Effects/disruptionsBG.jpeg');
+    background-attachment: fixed;  /* Makes the background stay fixed while scrolling */
 }
 
 .disruptions-container {
@@ -138,12 +139,242 @@ body {
 
 .impact-page {
     background-image: url('images/Human Impact/humanImpactBG.jpeg');
+    background-attachment: fixed;
+}
+
+.impact-main-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Style for the first transition section */
+.impact-first-section {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(6, 172, 222, 0.1) 25%,
+        rgba(0, 255, 157, 0.2) 100%
+    );
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the second transition section */
+.impact-second-section {
+    min-height: 100vh;
+    background: linear-gradient(
+        45deg,
+        rgba(0, 255, 157, 0.1) 0%,
+        rgba(6, 172, 222, 0.2) 50%,
+        transparent 100%
+    );
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the centered text boxes */
+.impact-text-box {
+    width: 50vw;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    padding: 4vh 3vw;
+    border-radius: 2vw;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0.4vh 1.5vh rgba(0, 0, 0, 0.2);
+}
+
+.impact-content {
+    max-width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* New styles for the Carbon & Nitrogen Cycles content section */
+.cycle-content-section {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 10vh 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+}
+
+.explanation-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.02);  /* Almost transparent background */
+    backdrop-filter: blur(8px);
+    padding: 3vh 2vw;
+    border-radius: 1.5vw;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0.3vh 1vh rgba(255, 255, 255, 0.1);
+}
+
+.text-content {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1vw;
+    line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.diagram-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);  /* Almost transparent background */
+    backdrop-filter: blur(8px);
+    padding: 2vh;
+    border-radius: 1.5vw;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0.4vh 1.5vh rgba(0, 0, 0, 0.15);
+}
+
+.cycle-diagram {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1vw;
+}
+
+/* Add new styles for the content sections */
+.main-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-section {
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(6, 172, 222, 0.1) 10%,
+        rgba(6, 172, 222, 0.2) 100%
+    );
+    backdrop-filter: blur(8px);
+    padding-top: 5vh;
+}
+
+/* Add styles for the nitrogen cycle section */
+.nitrogen-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5vh 5vw;
+}
+
+.nitrogen-content {
+    max-width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;  /* Reverses the order of items */
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+}
+
+/* Update the body styles for the home page */
+body:not(.cycle-page):not(.disruptions-page):not(.impact-page) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 0;  /* Remove the default padding-top */
+}
+
+/* Keep the existing home page container styles */
+body:not(.cycle-page):not(.disruptions-page):not(.impact-page) .content-container {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add styles for the disruptions content section */
+.disruptions-content-section {
+    max-width: 90vw;
+    margin: 15vh auto 0;  /* Added top margin to separate from title */
+    padding: 5vh 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+}
+
+.disruption-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1vw;
+}
+
+/* Update the main section for disruptions */
+.disruptions-page .main-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add styles for the second disruptions section */
+.disruptions-second-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5vh 5vw;
+}
+
+.disruptions-content-reversed {
+    max-width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;  /* Reverses the order of items */
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+}
+
+/* Update the content section for smooth transition */
+.disruptions-page .content-section {
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(6, 172, 222, 0.1) 10%,
+        rgba(6, 172, 222, 0.2) 100%
+    );
+    backdrop-filter: blur(8px);
+    padding-top: 5vh;
+}
+
+/* Add styles for the third disruptions section */
+.disruptions-third-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5vh 5vw;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(6, 172, 222, 0.1) 10%,
+        rgba(6, 172, 222, 0.2) 100%
+    );
+    backdrop-filter: blur(8px);
 }
 
 .impact-page .content-container {
-    margin-left: auto;
-    margin-right: 5vw;
+    margin: 0;
     width: 40vw;
-    margin-top: auto;
-    margin-bottom: 5vh;
 }
