@@ -378,3 +378,44 @@ body:not(.cycle-page):not(.disruptions-page):not(.impact-page) .content-containe
     margin: 0;
     width: 40vw;
 }
+
+.impact-header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.4vw;
+    color: #00E5FF;  /* Brighter cyan color */
+    text-align: center;
+    margin-bottom: 3vh;
+    letter-spacing: 0.2vw;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.9);  /* Matching glow */
+    padding: 1.5vh 3vw;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 229, 255, 0.2) 0%,
+        rgba(0, 255, 157, 0.2) 100%
+    );
+    backdrop-filter: blur(5px);
+    border-radius: 1vw;
+    border: 1px solid rgba(0, 229, 255, 0.6);  /* Brighter border */
+    box-shadow: 
+        0 0 20px rgba(0, 229, 255, 0.4),
+        inset 0 0 30px rgba(0, 255, 157, 0.2);
+}
+
+.impact-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #06ACDE,
+        transparent
+    );
+}
