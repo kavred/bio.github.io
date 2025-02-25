@@ -60,7 +60,7 @@
             emailjs.send("service_r1px7rs", "template_lqj75qp", {
                 to_email: "ureachkavin@outlook.com",
                 from_email: email,
-                message: "New subscription from podcast page"
+                message: `New subscription from podcast page\nSubscriber's email: ${email}`
             })
             .then(function() {
                 formMessage.textContent = "Thanks for subscribing!";
