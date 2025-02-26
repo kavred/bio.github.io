@@ -182,13 +182,19 @@ body {
 
 /* Style for the centered text boxes */
 .impact-text-box {
-    width: 50vw;
+    width: 70vw;  /* Increased width to fit more words per line */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
     padding: 4vh 3vw;
     border-radius: 2vw;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 0.4vh 1.5vh rgba(0, 0, 0, 0.2);
+    font-size: 0.4vw;  /* Significantly reduced font size */
+    line-height: 1.2;  /* Adjusted line height for better readability */
+}
+
+.impact-text-box p {
+    margin-bottom: 1.5vh;  /* Adjust the value as needed for spacing */
 }
 
 .impact-content {
@@ -560,4 +566,8 @@ body:not(.cycle-page):not(.disruptions-page):not(.impact-page) .content-containe
     margin-top: 10px;
     color: #00ff9d;
     text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+}
+
+.impact-page p {
+    margin-bottom: 3vh;  /* Doubled the value for spacing */
 }
